@@ -1,9 +1,13 @@
 # Etapa 1: Recursos
-FROM node:20
+FROM node:20 AS build
 WORKDIR /app
+
 COPY package*.json ./
 RUN npm install
+
 COPY . .
+
+# Variables de entorno
 ARG API_HOST
 ARG API_PORT
 ARG API_BASE

@@ -18,7 +18,7 @@ services:
     build: 
       context: ./client
       args:
-        API_HOST: backend
+        API_HOST: localhost
         API_PORT: 8081
         API_BASE: /adj/api
     container_name: adj-client
